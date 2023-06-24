@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="Event_Management_form" model="ir.ui.view">
+        <field name="name">Event_Management.form</field>
+        <field name="model">Event_Management</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <groups>
+                        <field name="name"/>
+                        <field name="employee"/>
+                        <field name=""/>
+                        <field name="date"/>
+
+                    </groups>
+                </sheet>
+
+            </form>
+
+        </field>
+
+     </record>
+
+
+     <record id="Event_Management_tree" model="ir.ui.view">
+        <field name="name">Event_Management.tree</field>
+        <field name="model">Event_Management</field>
+        <field name="arch" type="xml">
+            <tree>
+
+               <field name="name"/>
+               <field name="employee"/>
+               <field name=""/>
+               <field name="date"/>
+
+            </tree>
+
+        </field>
+
+     </record>
+
+     <record id="actions_Event_Management_views" model="ir.actions.act_window">
+        <field name="name">Event_Management</field>
+        <field name="res_model">Event_Management</field>
+        <field name="view_mode">tree,form</field>
+
+     </record>
+
+     <menuitem id="root_Event_Management_menu" name="Event_Management" sequence="1"/>
+     <menuitem id="main_Event_Management_menu" name="sEvent_Management" sequence="1" parent="root_Event_Management_menu"/>
+     <menuitem id="all_Event_Management_menu" name="ssEvent_Management" sequence="1" parent="main_Event_Management_menu" action="actions_Event_Management_views"/>
+     
+
+</odoo>
